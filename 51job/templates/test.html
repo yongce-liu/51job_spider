@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+
+</head>
+<body>
+
+    <table class="table table-striped">
+
+        <tr>
+            <td>排序</td>
+            <td>工作名称</td>
+            <td>公司名称</td>
+            <td>薪水</td>
+            <td>工作地区</td>
+            <td>工作福利</td>
+            <td>工作要求</td>
+        </tr>
+        {% for data in data_dict['python'] %}
+            <tr>
+                <td>{{ data[0] }}</td>
+                <td>
+                <a href="{{ data[2] }}" target="_blank">
+                            {{ data[1] }}</a>
+                </td>
+                <td>
+                <a href="{{ data[3] }}" target="_blank">
+                            {{ data[2] }}</a>
+                </td>
+                        <td>{{ data[5] }}</td>
+                        <td>{{ data[6] }}</td>
+                        <td>{{ data[9] }}</td>
+                        <td>{{ data[10] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
